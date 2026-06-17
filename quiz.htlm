@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Self Check</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="stress.html">Stress</a>
+  <a href="coping.html">Coping</a>
+  <a href="resources.html">Resources</a>
+  <a href="quiz.html">Self-Check</a>
+</nav>
+
+<header>
+  <h1>Self-Check Quiz</h1>
+</header>
+
+<section>
+  <div class="card">
+    <ul>
+      <li>Do I feel stressed most days?</li>
+      <li>Do I struggle with sleep?</li>
+      <li>Do I feel overwhelmed?</li>
+      <li>Do I avoid assignments?</li>
+    </ul>
+
+    <p><strong>Mostly Yes:</strong> You may need support</p>
+    <p><strong>Mostly No:</strong> You are managing well</p>
+  </div>
+</section>
+
+</body>
+</html>
