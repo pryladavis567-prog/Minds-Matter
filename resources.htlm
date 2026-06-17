@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resources</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="stress.html">Stress</a>
+  <a href="coping.html">Coping</a>
+  <a href="resources.html">Resources</a>
+  <a href="quiz.html">Self-Check</a>
+</nav>
+
+<header>
+  <h1>Support Resources</h1>
+</header>
+
+<section>
+  <div class="card">
+    <ul>
+      <li>Counseling services</li>
+      <li>Student health center</li>
+      <li>Academic advisors</li>
+      <li>Mentors & professors</li>
+      <li>988 Crisis Lifeline</li>
+    </ul>
+
+    <a class="btn" href="tel:988">Call 988</a>
+  </div>
+</section>
+
+</body>
+</html>
