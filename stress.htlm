@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stress</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="stress.html">Stress</a>
+  <a href="coping.html">Coping</a>
+  <a href="resources.html">Resources</a>
+  <a href="quiz.html">Self-Check</a>
+</nav>
+
+<header>
+  <h1>What Stress Looks Like</h1>
+</header>
+
+<section>
+  <div class="card">
+    <ul>
+      <li>Feeling overwhelmed</li>
+      <li>Trouble sleeping</li>
+      <li>Burnout or fatigue</li>
+      <li>Lack of motivation</li>
+      <li>Anxiety before assignments</li>
+    </ul>
+
+    <img class="hero-img"
+    src="https://images.unsplash.com/photo-1454165205744-3b78555e5572">
+  </div>
+</section>
+
+</body>
+</html>
