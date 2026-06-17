@@ -1,8 +1,25 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html>
 <head>
-<title>Self Check</title>
+<title>Self Check Quiz</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  .option {
+    display: block;
+    margin: 8px 0;
+  }
+
+  button {
+    margin-top: 15px;
+  }
+
+  #resultBox {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 14px;
+    background: #f0f4ff;
+  }
+</style>
 </head>
 
 <body>
@@ -17,21 +34,103 @@
 
 <header>
   <h1>Self-Check Quiz</h1>
+  <p>Answer honestly based on how you've felt recently</p>
 </header>
 
 <section>
-  <div class="card">
-    <ul>
-      <li>Do I feel stressed most days?</li>
-      <li>Do I struggle with sleep?</li>
-      <li>Do I feel overwhelmed?</li>
-      <li>Do I avoid assignments?</li>
-    </ul>
 
-    <p><strong>Mostly Yes:</strong> You may need support</p>
-    <p><strong>Mostly No:</strong> You are managing well</p>
-  </div>
+<div class="card">
+
+<form id="quizForm">
+
+  <h3>1. I feel overwhelmed by schoolwork most days.</h3>
+  <label class="option"><input type="radio" name="q1" value="1"> Strongly Disagree</label>
+  <label class="option"><input type="radio" name="q1" value="2"> Disagree</label>
+  <label class="option"><input type="radio" name="q1" value="3"> Neutral</label>
+  <label class="option"><input type="radio" name="q1" value="4"> Agree</label>
+  <label class="option"><input type="radio" name="q1" value="5"> Strongly Agree</label>
+
+  <h3>2. I have trouble sleeping because of stress or overthinking.</h3>
+  <label class="option"><input type="radio" name="q2" value="1"> Strongly Disagree</label>
+  <label class="option"><input type="radio" name="q2" value="5"> Strongly Agree</label>
+
+  <h3>3. I feel motivated to complete my assignments on time.</h3>
+  <label class="option"><input type="radio" name="q3" value="1"> Strongly Disagree</label>
+  <label class="option"><input type="radio" name="q3" value="5"> Strongly Agree</label>
+
+  <h3>4. I often feel anxious before exams or deadlines.</h3>
+  <label class="option"><input type="radio" name="q4" value="1"> Strongly Disagree</label>
+  <label class="option"><input type="radio" name="q4" value="5"> Strongly Agree</label>
+
+  <h3>5. I take breaks and practice self-care regularly.</h3>
+  <label class="option"><input type="radio" name="q5" value="1"> Strongly Disagree</label>
+  <label class="option"><input type="radio" name="q5" value="5"> Strongly Agree</label>
+
+  <h3>6. I feel tired even when I get enough sleep.</h3>
+  <label class="option"><input type="radio" name="q6" value="1"> Strongly Disagree</label>
+  <label class="option"><input type="radio" name="q6" value="5"> Strongly Agree</label>
+
+  <h3>7. I feel supported by friends, family, or classmates.</h3>
+  <label class="option"><input type="radio" name="q7" value="1"> Strongly Disagree</label>
+  <label class="option"><input type="radio" name="q7" value="5"> Strongly Agree</label>
+
+  <h3>8. I find it hard to concentrate on tasks or studying.</h3>
+  <label class="option"><input type="radio" name="q8" value="1"> Strongly Disagree</label>
+  <label class="option"><input type="radio" name="q8" value="5"> Strongly Agree</label>
+
+  <h3>9. I feel confident managing my academic responsibilities.</h3>
+  <label class="option"><input type="radio" name="q9" value="1"> Strongly Disagree</label>
+  <label class="option"><input type="radio" name="q9" value="5"> Strongly Agree</label>
+
+  <h3>10. I feel emotionally drained or burned out.</h3>
+  <label class="option"><input type="radio" name="q10" value="1"> Strongly Disagree</label>
+  <label class="option"><input type="radio" name="q10" value="5"> Strongly Agree</label>
+
+  <button type="button" class="btn" onclick="calculateScore()">See Results</button>
+
+</form>
+
+<div id="resultBox"></div>
+
+</div>
+
 </section>
+
+<script>
+function calculateScore() {
+  let total = 0;
+
+  for (let i = 1; i <= 10; i++) {
+    let answer = document.querySelector(`input[name=q${i}]:checked`);
+    if (!answer) {
+      alert("Please answer all questions.");
+      return;
+    }
+    total += parseInt(answer.value);
+  }
+
+  let resultText = "";
+  let advice = "";
+
+  if (total <= 20) {
+    resultText = "Low Stress Level 🌿";
+    advice = "You are managing stress well. Keep maintaining healthy habits like rest, balance, and self-care.";
+  } 
+  else if (total <= 35) {
+    resultText = "Moderate Stress Level ⚠️";
+    advice = "You may be experiencing stress buildup. Try improving sleep, time management, and taking breaks.";
+  } 
+  else {
+    resultText = "High Stress Level 🧠";
+    advice = "You may be experiencing burnout or high stress. Consider talking to a counselor or trusted support system.";
+  }
+
+  document.getElementById("resultBox").innerHTML = `
+    <h3>${resultText}</h3>
+    <p>${advice}</p>
+  `;
+}
+</script>
 
 </body>
 </html>
