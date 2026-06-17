@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Coping</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="stress.html">Stress</a>
+  <a href="coping.html">Coping</a>
+  <a href="resources.html">Resources</a>
+  <a href="quiz.html">Self-Check</a>
+</nav>
+
+<header>
+  <h1>Coping Strategies</h1>
+</header>
+
+<section>
+  <div class="card">
+    <h3>Breathing</h3>
+    <p>Inhale 4 sec → Hold 4 → Exhale 6</p>
+
+    <h3>Journaling</h3>
+    <p>Write thoughts and track emotions daily</p>
+
+    <h3>Time Management</h3>
+    <p>Use planners and break tasks into steps</p>
+  </div>
+</section>
+
+</body>
+</html>
